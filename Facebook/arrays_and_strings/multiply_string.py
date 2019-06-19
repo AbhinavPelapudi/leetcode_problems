@@ -1,18 +1,18 @@
 # Multiply Strings
-# time: O(n^2)
-# space: O(n)
+# time: O(nm)
+# space: O(n + m)
 
 class Solution:
     def multiply(self, num1: str, num2: str) -> str:
-        result = []
-        num1 = list(num1)[::-1]
-        num2 = list(num2)[::-1]
-        for i in range(len(num1)):
-            for j in range(len(num2)):
-                n1 = num1[i]
-                n2 = num2[j]
-                prod = (int(n1) * (10 ** i)) * (int(n2) * (10 ** j)) 
-                result.append(prod)
-        return str(sum(result))
+        result = [] #intitialize array
+        num1 = list(num1)[::-1] #reverse nums1
+        num2 = list(num2)[::-1] #reverse nums2
+        for i in range(len(num1)): #iterate form back to front
+            for j in range(len(num2)): #iterate from back to front
+                n1 = num1[i] #num
+                n2 = num2[j] #num
+                prod = (int(n1) * (10 ** i)) * (int(n2) * (10 ** j)) #using the num and the index to get the values in terms of base 10
+                result.append(prod) #append to prod
+        return str(sum(result)) #sum and return
         
         
