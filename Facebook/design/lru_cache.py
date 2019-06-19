@@ -1,3 +1,5 @@
+# time: O(1)
+# space: O(n)
 # LRU Cache
 class Node:
     def __init__(self, key, value):
@@ -8,47 +10,47 @@ class Node:
     
 class LRUCache:
     def __init__(self, capacity: int):
-        self.capacity = capacity
-        self.cache = {}
-        self.head = Node(None, None)
-        self.tail = Node(None, None)
-        self.head.next = self.tail
+        self.capacity = capacity #assign capacity
+        self.cache = {} #set cache
+        self.head = Node(None, None) #assign head
+        self.tail = Node(None, None) #assign tail
+        self.head.next = self.tail #create relationship between head and tail
         self.tail.prev = self.head
 
     def assign_head(self, node):
         old_head = self.head.next
         if old_head.key == node.key:
             return
-        if node.key in self.cache:
+        if node.key in self.cache: #remove from its original position
             node.prev.next = node.next
             node.next.prev = node.prev
-        self.head.next = node
+        self.head.next = node # reassign and shift down
         node.prev = self.head
         node.next = old_head
         old_head.prev = node
     
-    def get(self, key: int) -> int:
+    def get(self, key: int) -> int: #shifts up when retrieved 
         if key not in self.cache:
             return -1
         self.assign_head(self.cache[key])
         return self.cache[key].value
         
-    def remove_node(self):
+    def remove_node(self): #using the tail, remove node
         node = self.tail.prev
         node.prev.next = node.next
         node.next.prev = node.prev
         self.cache.pop(node.key)
     
     def put(self, key: int, value: int) -> None:
-        if key in self.cache:
+        if key in self.cache: #reassigns value if it exists
             self.cache[key].value = value
             self.assign_head(self.cache[key])
             return
-        if len(self.cache) == self.capacity:
+        if len(self.cache) == self.capacity: #if at capacity, remove last node
             self.remove_node()
-        new_node = Node(key, value)
-        self.assign_head(new_node)
-        self.cache[key] = new_node
+        new_node = Node(key, value) #create new node
+        self.assign_head(new_node) #assign head
+        self.cache[key] = new_node #cache the node
         
 
 

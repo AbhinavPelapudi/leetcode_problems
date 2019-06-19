@@ -1,3 +1,6 @@
+# time: O(n)
+# O(n)
+
 # Binary Search Tree Iterator
 # Definition for a binary tree node.
 # class TreeNode:
@@ -9,27 +12,27 @@
 class BSTIterator:
 
     def __init__(self, root: TreeNode):
-        self.stack = self.re_pop(root)
+        self.stack = self.re_pop(root) #initialization
     
-    def re_pop(self, root):
-        if not root:
+    def re_pop(self, root) -> None:
+        if not root: # if no value just return empty array
             return []
-        stack = [root]
-        current = root
+        stack = [root] #start with a stack
+        current = root #use current as a means to move through tree
         while current:
-            if current.left:
+            if current.left: #add all values to the left of of the root
                 stack.append(current.left)
             current = current.left
-        return stack
+        return stack #return stack
     
     def next(self) -> int:
         """
         @return the next smallest number
         """
         if self.stack:
-            top = self.stack.pop()
-            if top.right:
-                self.stack = self.stack + self.re_pop(top.right)
+            top = self.stack.pop() #pop off top
+            if top.right: #if right is found
+                self.stack = self.stack + self.re_pop(top.right) #add everying to the left of right
             return top.val
 
     def hasNext(self) -> bool:

@@ -1,3 +1,6 @@
+# time: O(n)
+# space: O(n)
+
 # Serialize and Deserialize Binary Tree
 # Definition for a binary tree node.
 # class TreeNode(object):
@@ -9,7 +12,7 @@ from collections import deque
 class Codec:
     def serialize(self, root):
         vals = []
-        def pre_order(node):
+        def pre_order(node): #do a preorder search
             if not node:
                 vals.append('#')
                 return 
@@ -22,16 +25,16 @@ class Codec:
     def deserialize(self, data):
         if not data: 
             return
-        data = deque(data.split(' '))
+        data = deque(data.split(' ')) # split the data being passed through
         def pre_order():
             if data:
-                current = data.popleft()
-            if current == '#':
+                current = data.popleft() #pop data
+            if current == '#': #use this to move up the tree
                 return None
-            root = TreeNode(int(current))
-            root.left = pre_order()
-            root.right = pre_order()
-            return root
+            root = TreeNode(int(current)) #set root
+            root.left = pre_order() #go as far left as possible
+            root.right = pre_order() #then go as far right as possible
+            return root #this will be assign to previous stacks to build tree
         return pre_order()
         
         
