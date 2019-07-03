@@ -1,6 +1,20 @@
 # Add Two Numbers
 # time: O(n)
 # space: O(n)
+"""
+Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+Output: 7 -> 0 -> 8
+
+carry = 0
+new_ll = 7 -> 0 -> 8
+           *
+(2 -> 4 -> 3)
+
+           *
+(5 -> 6 -> 4)
+
+
+"""
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         carry = 0

@@ -1,6 +1,34 @@
 # Add and Search Word - Data structure design
 # time: ??
 # space: ??
+
+"""
+addWord("bad")
+addWord("dad")
+addWord("mad")
+search("pad") -> false
+search("bad") -> true
+search(".ad") -> true
+search("b..") -> true
+
+                        ""
+                    /  | |  \
+                   b   d  m    p
+                  /    |  |     \
+                 a     a  a       a  
+                /      |  |         \
+             d()    (T)d  (T)d       (T)d
+
+
+self.root = Node("")
+self.root.children = {
+    b: Node(b),
+    d:Node(d),
+    m:Node(m),
+    p:Node(p)
+}
+
+"""
 class Node: #node class for a trie
     def __init__(self, val):
         self.val = val

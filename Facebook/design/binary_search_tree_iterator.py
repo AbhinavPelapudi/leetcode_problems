@@ -9,6 +9,30 @@
 #         self.left = None
 #         self.right = None
 
+"""
+
+        7
+      /   \
+     3     15
+          /  \
+        9     20
+iteration 1:
+stack = [7,3] 
+next -> 3
+
+iteration 2:
+stack = [15, 9]
+next -> 7
+
+iteration 3:
+stack = [20]
+next -> 9
+next -> 15
+next -> 20
+
+
+"""
+
 class BSTIterator:
 
     def __init__(self, root: TreeNode):

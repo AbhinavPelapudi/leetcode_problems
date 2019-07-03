@@ -1,6 +1,37 @@
 # time: O(1)
 # space: O(n)
 # LRU Cache
+
+"""
+self.capacity = 3
+start: Node(start) -> Node(end)
+                   <-
+
+add(1:1)
+cache = {1: Node(1)}
+Node(start) -> Node(1) -> Node(end)
+            <-        <-
+
+add(2:2)
+cache = {1: Node(1), 2: Node(2)}
+Node(start) -> Node(2) -> Node(1) -> Node(end)
+            <-        <-          <-   
+
+add(3:2)
+cache = {1: Node(1), 2: Node(2), 3, Node(3)}
+
+Node(start) -> Node(3)-> Node(2) -> Node(1) -> Node(end)
+            <-        <-        <-          <-   
+
+add(4:4)
+Node(start) -> Node(4) -> Node(3)-> Node(2) -> Node(end)
+            <-        <-        <-          <-
+
+get(3, 2)
+Node(start) -> Node(3)-> Node(4) ->  Node(2) -> Node(end)
+            <-        <-        <-          <-
+
+"""
 class Node:
     def __init__(self, key, value):
         self.key = key

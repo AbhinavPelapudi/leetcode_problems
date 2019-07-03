@@ -7,7 +7,30 @@
 #     def __init__(self, x):
 #         self.val = x
 #         self.next = None
+"""
 
+Given 1->2->3->4->5
+reorder it to 1->5->2->4->3.
+
+double_ll = [[1, N], [2,1], [3,2], [4, 3], [5, 4]]
+double_ll = [[4, 3], [5, 4]]
+
+
+double_ll = [[4, 3]]
+new_parent = 5
+parent = 4
+1->N
+2->3->4
+1->5->2->3->4
+
+
+double_ll = []
+new_parent = 4
+parent = 3
+1->5->2->N
+3
+1->5->2->4->3
+"""
 class Solution:
     def reorderList(self, head: ListNode) -> None:
         """

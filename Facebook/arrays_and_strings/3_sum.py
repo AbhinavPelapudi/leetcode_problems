@@ -1,5 +1,22 @@
 # time: O(n^2)
 # space: O(1)
+
+"""
+input = [-1, 0, 1, 2, -1, -4],
+output = [
+  [-1, 0, 1],
+  [-1, -1, 2]
+]
+result = [[-1,-1,2], [-1, 0, 2]]
+step 1: sort -> [-4, -1, -1, 0, 1, 2]
+step 2: iterate 
+        [-4, -1, -1, 0, 1, 2]
+                  i
+                     j
+                        k 
+        
+step 3: return result
+"""
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         nums.sort() #sorted nums

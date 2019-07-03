@@ -8,6 +8,21 @@ class Node:
         self.val = val
         self.next = next
         self.random = random
+
+
+1(next = 2
+random = 2) -> 2(next = None
+random = 2) -> None
+
+
+current = 1, 2
+copy_node = 1, 2
+seen = {
+    1: Node(1),
+    2: Node(2)
+    }
+
+
 """
 class Solution:
     def copyRandomList(self, head: 'Node') -> 'Node':
