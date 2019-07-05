@@ -4,7 +4,23 @@
 #         self.val = x
 #         self.left = None
 #         self.right = None
+"""
+          1
+         / \
+        2   3
+       / \     
+      4   5   
+ans = 0 
 
+ 
+          1
+         / \
+      (2)2   3(1)
+       / \     
+    (1)4   5(1)  
+
+ans = 3
+"""
 class Solution:
     def diameterOfBinaryTree(self, root: TreeNode) -> int:
         self.ans = 0

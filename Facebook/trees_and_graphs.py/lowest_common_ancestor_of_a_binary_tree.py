@@ -5,6 +5,33 @@
 #         self.val = x
 #         self.left = None
 #         self.right = None
+
+
+"""
+Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
+Output: 3
+                3
+               /  \
+              5    1
+            /  \   / \
+           6    2  0  8
+               / \
+              7   4
+paths = {
+    3: None, 
+    5: 3, 
+    1: 3,
+    6: 5,
+    2: 5, 
+    0: 1, 
+    7: 2, 
+    4: 2, 
+    8: 1
+}
+visited = {5,3}
+p = 5
+q = 1
+"""
 from collections import deque
 class Solution:
     def get_path(self, root):

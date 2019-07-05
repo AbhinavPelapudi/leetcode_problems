@@ -1,6 +1,17 @@
 # Decode Ways
 # time: O(??)
 # space: O(??)
+
+"""
+226
+                                (0, 1)(3)
+                            /           \
+                     (2) (1, 1)           (0, 2)(1)
+                       /     \          /       
+              (1)(2, 1)    (1, 2)(1)   (2, 1)(1)
+
+"""
+
 class Solution:
     def numDecodings(self, s: str) -> int:
         cache = {} #this will serve as the memo 

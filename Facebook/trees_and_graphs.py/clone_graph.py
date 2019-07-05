@@ -5,6 +5,17 @@ class Node:
     def __init__(self, val, neighbors):
         self.val = val
         self.neighbors = neighbors
+1 -- 2
+|    |
+4 -- 3
+seen = {1, 2, 4}
+q = [3]
+Node(1).neighbors = [2, 4]
+Node(2).neighbors = [1, 3]
+Node(4).neighbors = [1, 3]
+Node(3).neighbors = [2, 4]
+copy_nodes = {1: Node(1), 2: Node(2), 4: Node(4), 3: Node(3)}
+
 """
 from collections import deque
 class Solution:

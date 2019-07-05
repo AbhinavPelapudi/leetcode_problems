@@ -1,3 +1,33 @@
+"""
+Input: 
+accounts = [["John", "johnsmith@mail.com", "john00@mail.com"], ["John", "johnnybravo@mail.com"], ["John", "johnsmith@mail.com", "john_newyork@mail.com"], ["Mary", "mary@mail.com"]]
+Output: [["John", 'john00@mail.com', 'john_newyork@mail.com', 'johnsmith@mail.com'],  ["John", "johnnybravo@mail.com"], ["Mary", "mary@mail.com"]]
+
+
+seen = set(0, 2, 1)
+graph = {
+    "johnsmith@mail.com": [],
+    "john00@mail.com": [],
+    "johnnybravo@mail.com": [],
+    "john_newyork@mail.com":[],
+    "mary@mail.com": []
+}
+(iterate)
+[
+    ["John",], 
+    ["John", ], 
+    ["John",], 
+    ["Mary",]
+]
+
+name = John
+emails = set("johnnybravo@mail.com")
+
+[[John, h@mail.com", "john_newyork@mail.com"], [John, "johnnybravo@mail.com"], [mary, "mary@mail.com"]]
+
+"""
+
+
 from collections import defaultdict
 class Solution:
     def accountsMerge(self, accounts: List[List[str]]) -> List[List[str]]:

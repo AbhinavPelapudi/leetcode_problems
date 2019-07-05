@@ -7,6 +7,53 @@ class Node:
         self.val = val
         self.left = left
         self.right = right
+
+        4
+       /  \
+      2    5
+    /  \
+   1    3
+
+stack = []
+node = 4
+
+stack = [4,2]
+node = 1
+head = 1
+prev = 1
+
+stack = [4, 3]
+node = 3
+head = 1
+prev = 2
+
+1 -> 2
+  <-
+
+stack = [4]
+node = 3
+head = 1
+prev = 3
+
+1 -> 2 -> 3
+  <-   <-
+
+stack = []
+node = 4
+head = 1
+prev = 4
+
+1 -> 2 -> 3 -> 4
+  <-   <-   <-
+
+stack = [5]
+node = 5
+head = 1
+prev = 4
+
+1 -> 2 -> 3 -> 4 -> 5
+  <-   <-   <-   <-
+
 """
 class Solution:
     def treeToDoublyList(self, root: 'Node') -> 'Node':

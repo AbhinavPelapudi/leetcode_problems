@@ -5,7 +5,71 @@
 #         self.val = x
 #         self.left = None
 #         self.right = None
+"""
+    1
+   / \
+  2   5
+ / \   \
+3   4   6
 
+1
+ \
+  2
+   \
+    3
+     \
+      4
+       \
+        5
+         \
+          6
+
+
+   1
+    \
+    2  
+    / \  
+   3   4   
+
+current = 1
+stack = [5]
+
+
+   1
+    \
+    2  
+      \   
+       3      
+
+current = 2
+stack = [5, 4]
+
+
+   1
+    \
+    2  
+      \   
+       3 
+        \     
+         4
+
+current = 3
+stack = [5,]
+
+   1
+    \
+    2  
+      \   
+       3 
+        \     
+         4
+           \
+            5
+         
+current = 4
+stack = []
+
+"""
 class Solution:
     def flatten(self, root: TreeNode) -> None:
         """

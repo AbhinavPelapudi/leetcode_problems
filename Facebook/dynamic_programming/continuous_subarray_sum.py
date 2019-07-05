@@ -1,3 +1,16 @@
+"""
+Input: [23, 2, 6, 4, 7],  k=6
+Output: True
+
+[23, 2, 6, 4, 7]
+
+mod_k = 0
+mods = {0: -1, 5: 0, 1: 1}
+mod_k = (23 + 0) % 6 => 5
+mod_k = (2 + 5) % 6 => 1
+mod_k = (6 + 1) % 6 => 1
+mod_k = (4 + 1) % 6 => 1
+"""
 # Continuous Subarray Sum
 class Solution:
     def checkSubarraySum(self, nums: List[int], k: int) -> bool:

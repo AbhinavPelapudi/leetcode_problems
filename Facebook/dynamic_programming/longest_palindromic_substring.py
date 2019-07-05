@@ -1,6 +1,22 @@
 # Longest Palindromic Substring
 # time: O(n ^2)
 # space: O(n )
+
+
+
+"""
+    "babad"
+     B       A     B       A      D
+    [True, False, True, False, False]
+    [False, True, False, True, False]
+    [False, False, True, False, False]
+    [False, False, False, True, False]
+    [False, False, False, False, True]
+
+i = 2
+j = 0 
+
+"""
 class Solution:
 
     def longestPalindrome(self, s: str) -> str:

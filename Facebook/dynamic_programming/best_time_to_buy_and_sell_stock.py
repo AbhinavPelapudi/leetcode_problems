@@ -2,6 +2,15 @@
 # time: O(n)
 # space:O(1)
 # Best Time to Buy and Sell Stock
+
+"""
+[7,1,5,3,6,4]
+max_profit = 5
+profit = 5
+min_price = 1
+
+
+"""
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         if not prices:

@@ -6,6 +6,21 @@
 #         self.left = None
 #         self.right = None
 
+
+"""
+    5
+   / \
+  1   4
+     / \
+    3   6
+
+Input: [5,1,4,null,null,3,6]
+Output: false
+
+
+[1,5,4,3,6]
+
+"""
 class Solution(object):
     def isValidBST(self, root):
         """

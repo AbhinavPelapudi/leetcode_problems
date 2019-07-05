@@ -6,7 +6,23 @@
 #         self.val = x
 #         self.left = None
 #         self.right = None
+"""
+Input: [-10,9,20,null,null,15,7]
 
+        -10(34)
+        / \
+    (9)9  20(42)
+         /  \
+        15   7
+
+Output: 42
+
+
+
+self.ans = -float('inf')
+
+
+"""
 class Solution:
     def maxPathSum(self, root: TreeNode) -> int:
         if not root:

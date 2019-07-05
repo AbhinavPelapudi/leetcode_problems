@@ -1,6 +1,20 @@
 # Letter Combinations of a Phone Number
 
+"""
+Input: "23"
+Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 
+'2': ['a','b','c']
+'3': ['d','e','f']
+
+depth = 0, 1, 2
+build = cf
+result = ['ad', 'ae', 'af', 'bd', 'be', 'bf', 'cd', 'ce', 'cf']
+
+
+
+
+"""
 class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
         if not digits:
