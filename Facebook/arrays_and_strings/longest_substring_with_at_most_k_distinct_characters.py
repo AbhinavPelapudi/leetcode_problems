@@ -1,5 +1,20 @@
 # time: O(s * k)
 # space: O(k)
+
+"""
+Input: s = "eceba", k = 2
+Output: 3
+
+current_string = 2
+max_string = 13
+start = 3
+
+chars
+b - 1
+a - 1
+"eceba"
+
+"""
 from collections import defaultdict
 class Solution:
     def lengthOfLongestSubstringKDistinct(self, s: str, k: int) -> int:

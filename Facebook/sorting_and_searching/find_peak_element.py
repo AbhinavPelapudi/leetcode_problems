@@ -1,4 +1,12 @@
 # Find Peak Element
+"""
+Input: nums = [1,2,1,3,5,6,4]
+Output: 1 or 5
+
+
+[1,2,1,3,5,6,4]
+   *
+"""
 class Solution:
     def findPeakElement(self, nums: List[int]) -> int:
         if len(nums) < 2:

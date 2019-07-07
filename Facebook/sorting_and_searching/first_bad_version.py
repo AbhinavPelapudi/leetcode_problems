@@ -3,7 +3,18 @@
 # @param version, an integer
 # @return a bool
 # def isBadVersion(version):
+"""
+    Given n = 5, and version = 4 is the first bad version.
 
+    call isBadVersion(3) -> false
+    call isBadVersion(5) -> true
+    call isBadVersion(4) -> true
+
+    Then 4 is the first bad version.
+                    s              e
+    [false, false, false, true, true]
+                            *      
+"""
 class Solution:
     def firstBadVersion(self, n):
         """

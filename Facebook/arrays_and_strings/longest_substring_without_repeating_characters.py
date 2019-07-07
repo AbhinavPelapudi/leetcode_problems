@@ -4,9 +4,16 @@
 Input: "abcabcbb"
 Output: 3 
 
-s = 0 
-seen = {}
-max_length = 0
+s = 2
+length = 3
+max_length = 3
+
+seen 
+c
+a
+b
+
+
 """
 class Solution:
     def lengthOfLongestSubstring(self, string: str) -> int:

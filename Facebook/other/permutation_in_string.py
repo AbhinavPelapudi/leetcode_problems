@@ -1,4 +1,23 @@
 # Permutation in String
+"""
+Input: s1 = "ab" s2 = "eidbaooo"
+Output: True
+
+builder_dict
+b - 1
+a - 1
+
+s1_dict
+a - 1
+b - 1
+
+start = 3
+
+"eidbaooo"
+
+"""
+
+
 from collections import defaultdict
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
