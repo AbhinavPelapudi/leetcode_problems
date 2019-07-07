@@ -1,6 +1,32 @@
 # Move Zeroes
 # time: O(n)
 # space: O(1)
+
+"""
+Input: [0,1,0,3,12]
+Output: [1,3,12,0,0]
+
+idx = 0 
+   *
+[0,1,0,3,12]
+ * 
+
+idx = 1
+       *
+[1,0,0,3,12]
+   * 
+
+idx = 2
+       *
+[1,3,0,0,12]
+     * 
+
+
+idx = 2
+          *
+[1,3,12,0,0]
+     * 
+"""
 class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
         """

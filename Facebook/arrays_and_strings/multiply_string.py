@@ -2,6 +2,19 @@
 # time: O(nm)
 # space: O(n + m)
 
+"""
+Input: num1 = "123", num2 = "456"
+Output: "56088"
+
+              *
+num1 = [3, 2, 1]
+            *   
+nums2 = [6, 5, 4]
+
+result = [18, 150, 1200, 120, 1000, 8000 , 600, 5000, 40000 ]
+sum(result) = 56088
+
+"""
 class Solution:
     def multiply(self, num1: str, num2: str) -> str:
         result = [] #intitialize array
