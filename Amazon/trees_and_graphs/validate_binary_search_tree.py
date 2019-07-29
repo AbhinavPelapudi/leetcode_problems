@@ -1,3 +1,4 @@
+# Validate Binary Search Tree
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):
@@ -5,6 +6,17 @@
 #         self.left = None
 #         self.right = None
 
+
+"""
+    5
+   / \
+  1   4
+     / \
+    3   6
+Input: [5,1,4,null,null,3,6]
+Output: false
+[1,5,4,3,6]
+"""
 class Solution(object):
     def isValidBST(self, root):
         """
@@ -28,5 +40,5 @@ class Solution(object):
                 return False
             threshold = max(value, threshold)
         return True
-            
+     
             
