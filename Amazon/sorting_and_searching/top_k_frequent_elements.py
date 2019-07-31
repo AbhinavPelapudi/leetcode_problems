@@ -1,3 +1,15 @@
+"""
+Input: nums = [1,1,1,2,2,3], k = 2
+Output: [1,2]
+
+frequency = {1: 3, 2: 2, 3: 1}
+partners = [[1, 3], [2: 2], [3: 1]]
+result = [1, 2]
+
+
+"""
+
+
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         frequency = {}

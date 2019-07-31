@@ -1,3 +1,42 @@
+"""
+Input: 
+board = [
+  ['o','a','a','n'],
+  ['e','t','a','e'],
+  ['i','h','k','r'],
+  ['i','f','l','v']
+]
+words = ["oath","pea","eat","rain"]
+
+Output: ["eat","oath"]
+
+
+
+board = [
+  ['o','a','a','n'],
+  ['e','t','a','e'],
+  ['i','h','k','r'],
+  ['i','f','l','v']
+]
+
+Trie: 
+
+                    "   "
+                o   p   e  r
+               /   /    |   \
+              a   e     a    a
+             /   /      |     \
+            t   a       t      i
+           /                    \
+          h                      n
+
+
+combos = [oath, ]
+"""
+
+
+
+
 class Solution(object):
     def combo_getter(self, board, trie, r, c, builder):
         combos = []

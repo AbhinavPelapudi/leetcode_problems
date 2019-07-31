@@ -5,6 +5,20 @@
 #         self.left = None
 #         self.right = None
 
+
+"""
+    1
+   / \
+  2   2
+   \   \
+   3    3
+
+q = [2,2]
+c_q = []
+s = 0 
+e = 1
+
+"""
 class Solution(object):
 
     def isSymmetric(self, root):

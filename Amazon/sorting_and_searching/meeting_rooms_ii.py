@@ -1,3 +1,15 @@
+"""
+Input: [[0, 30],[5, 10],[15, 20]]
+Output: 2
+
+
+[[0, 30],[5, 10],[15, 20]]
+                  *
+heap = [20, 30]
+
+"""
+
+
 class Solution:
     def minMeetingRooms(self, intervals: List[List[int]]) -> int:
         intervals.sort()

@@ -5,6 +5,23 @@
 #         self.left = None
 #         self.right = None
 
+
+"""
+[
+  [3],
+  [9,20],
+  [15,7]
+]
+    3
+   / \
+  9  20
+    /  \
+   15   7
+
+results = [[3], [9, 20], [15, 7]]
+q = [9, 20]
+c_q = [15, 7]
+"""
 class Solution(object):
     def levelOrder(self, root):
         """

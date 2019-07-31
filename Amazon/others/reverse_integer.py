@@ -1,3 +1,18 @@
+
+"""
+Input: 123
+Output: 321
+
+
+123
+
+remainder = 1
+x = 0
+
+new_num = 321
+"""
+
+
 class Solution:
     def reverse(self, x: int) -> int:
         if x < 0:

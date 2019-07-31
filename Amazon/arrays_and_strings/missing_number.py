@@ -1,3 +1,12 @@
+"""
+
+Input: [9,6,4,2,3,5,7,0,1]
+Output: 8
+
+
+
+"""
+
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
         if 0 not in nums:

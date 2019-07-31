@@ -4,7 +4,27 @@
 #         self.val = x
 #         self.left = None
 #         self.right = None
+"""
+    3
+   / \
+  9  20
+    /  \
+   15   7
 
+[
+  [3],
+  [20,9],
+  [15,7]
+]
+
+s1 = [7, 15]
+s2 = [9]
+results = [[3], [20, 9], [15, 7]]
+level = [20, 9]
+current = 3
+
+
+"""
 class Solution(object):
     def zigzagLevelOrder(self, root):
         """

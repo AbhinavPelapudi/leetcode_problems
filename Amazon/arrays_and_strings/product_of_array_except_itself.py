@@ -1,8 +1,21 @@
 
-# Product of Array Except Self
-# time: O(n)
-# space: O(n)
 
+"""
+Product of Array Except Self
+time: O(n)
+space: O(n)
+Input:  [1,2,3,4]
+Output: [24,12,8,6]
+
+product = [24,12,8,6]
+
+left_product = 2, 6
+right_product = 4, 12, 24
+
+
+
+
+"""
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         products = [1] * len(nums) #create an array of 1s

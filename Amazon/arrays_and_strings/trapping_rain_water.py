@@ -1,3 +1,9 @@
+
+"""
+
+
+"""
+
 class Solution:
     def trap(self, arr: List[int]) -> int:
         left = right = water = 0

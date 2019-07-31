@@ -1,5 +1,30 @@
 from collections import deque
 import string
+
+
+"""
+
+Input:
+beginWord = "hit",
+endWord = "cog",
+wordList = ["hot","dot","dog","lot","log","cog"]
+
+Output: 5
+
+Explanation: As one shortest transformation is "hit" -> "hot" -> "dot" -> "dog" -> "cog",
+return its length 5.
+
+seen = {"hit", }
+wordList = {"hot","dot","dog","lot","log","cog"}
+alpha = 'abcdefghijklmnopqrstuvwxyz'
+q = [ (dog, 4)]
+word= lot
+length = 3
+
+
+
+"""
+
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
         seen = set()

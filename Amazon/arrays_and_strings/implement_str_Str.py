@@ -1,3 +1,9 @@
+"""
+Input: haystack = "hello", needle = "ll"
+Output: 2
+
+"""
+
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
         if len(needle) > len(haystack):
