@@ -1,4 +1,16 @@
-# Valid Parentheses
+"""
+Example 1:
+Input: "([)]"
+Output: false
+Example 2:
+Input: "{[]}"
+Output: true
+"([)]"
+   *
+seen_paren = [ (,[, ]
+"""
+
+
 class Solution:
     def isValid(self, s: str) -> bool:
         if len(s) % 2 != 0:

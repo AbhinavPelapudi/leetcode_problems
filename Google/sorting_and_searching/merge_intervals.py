@@ -1,3 +1,12 @@
+# Merge Intervals
+
+""""
+Input: [[1,3],[2,6],[8,10],[15,18]]
+Output: [[1,6],[8,10],[15,18]]
+[[1,3],[2,6],[8,10],[15,18]]
+           *
+result = [[1, 6], [8, 10], [15, 18]]
+"""
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         if len(intervals) <= 1:
