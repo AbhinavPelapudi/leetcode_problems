@@ -1,3 +1,16 @@
+"""
+Input: nums = [5,7,7,8,8,10], target = 8
+Output: [3,4]
+
+
+         *
+[5,7,7,8,8,10]
+       *
+
+ m = 3
+"""
+
+
 class Solution:
     def binary_search_first(self, nums, start, end, target):
         found_pos = end

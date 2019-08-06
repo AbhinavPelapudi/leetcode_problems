@@ -1,4 +1,30 @@
 # Course Schedule II
+
+"""
+Input: 4, [[1,0],[2,0],[3,1],[3,2]]
+Output: [0,1,2,3] or [0,2,1,3]
+Explanation: There are a total of 4 courses to take. To take course 3 you should have finished both     
+             courses 1 and 2. Both courses 1 and 2 should be taken after you finished course 0. 
+             So one correct course order is [0,1,2,3]. Another correct ordering is [0,2,1,3] .
+
+
+[[1,0],[2,0],[3,1],[3,2]]
+prereqs = {
+    1: [], 
+    2: [], 
+    3: []
+}
+1, 2, 3, 4
+*
+
+visited = {1, 0, 2 }
+
+course = 2
+new_course = 0
+path = {}
+
+result = [0, 1, 2, 3]
+"""
 from collections import defaultdict
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
@@ -15,7 +41,6 @@ class Solution:
             while prereqs[course]:
                 new_course = prereqs[course].pop()
                 if new_course in path:
-    
                     top_sort.is_cycle = True
                 if new_course not in visited:
                     visited.add(new_course)

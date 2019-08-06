@@ -1,12 +1,22 @@
-# Merge k Sorted Lists
-
 # Definition for singly-linked list.
 from queue import PriorityQueue
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+"""
+Input:
+[
+  1->4->5,
+  1->3->4,
+  2->6
+]
+Output: 1->1->2->3->4->4->5->6
+q = []
+prev =Node(4)
+head = Node(1)
+current = Node(6)
+"""
 class Solution:
     def mergeKLists(self, lists: List[ListNode]) -> ListNode:
         q = PriorityQueue()
@@ -24,6 +34,5 @@ class Solution:
                 prev.next = current
             prev = current
         return head
-                
             
             

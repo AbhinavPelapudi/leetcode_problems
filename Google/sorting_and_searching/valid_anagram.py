@@ -1,3 +1,34 @@
+"""
+Example 1:
+
+Input: s = "anagram", t = "nagaram"
+Output: true
+Example 2:
+
+Input: s = "rat", t = "car"
+Output: false
+
+s = "anagram"
+
+t = "nagaram"
+
+s_freq = {
+    a:3,
+    n:1,
+    g:1,
+    r:1, 
+    m:1
+}
+t_freq = {
+    a:3,
+    n:1,
+    g:1,
+    r:1, 
+    m:1
+}
+
+"""
+
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):

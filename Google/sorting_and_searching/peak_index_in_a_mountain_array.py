@@ -1,3 +1,14 @@
+
+"""
+
+Input: [0,2,1,0]
+Output: 1
+
+
+[0,2,1,0]
+   *
+"""
+
 class Solution:
     def peakIndexInMountainArray(self, A: List[int]) -> int:
         for i in range(len(A)):

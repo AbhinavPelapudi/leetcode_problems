@@ -4,6 +4,31 @@
 #         self.val = x
 #         self.left = None
 #         self.right = None
+
+
+"""
+                    1
+                   / \
+                 3     2
+                  \   / \
+                   6  4  5  
+                        / \     
+                       7   8
+
+
+                1
+               / \ 
+             3     2
+              \   / \
+               6 4   5
+                    / \
+                   8   7
+
+
+q = [[7, 7], [8, 8]]
+node1 = 5
+node2 = 5
+"""
 from collections import deque
 class Solution:
     def flipEquiv(self, root1: TreeNode, root2: TreeNode) -> bool:
